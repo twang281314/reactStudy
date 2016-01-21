@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+     <script src="https://cdn.bootcss.com/react/0.13.3/JSXTransformer.js"></script>
+     <script src="https://cdn.bootcss.com/react/0.13.3/react.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/jsx">
+    
+    var HelloMessage = React.createClass({
+    render: function() {
+        return <div>Hello {this.props.name}</div>;
+    }
+    });
+
+    React.render(
+     <HelloMessage name="John" />, document.getElementById('example'));
+
+    </script>
+  </body>
+</html>
