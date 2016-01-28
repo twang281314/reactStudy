@@ -1,0 +1,14 @@
+{
+  "name": "es6-webpack",
+  "version": "1.0.0",
+  "description": "react-es6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "anytao",
+  "license": "ISC",
+  "dependencies": {
+    "hjs-webpack": "^7.0.0"
+  }
+}

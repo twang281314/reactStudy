@@ -14,5 +14,10 @@
     "node-argv": "0.0.7",
     "webpack": "1.12.1",
     "webpack-dev-server": "1.10.1"
+  },
+  "dependencies": {
+    "node-argv": "0.0.7",
+    "webpack": "^1.12.12",
+    "webpack-dev-server": "^1.14.1"
   }
 }

@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './src/componet/App.jsx'
 
-var App=require('./src/component/App.jsx');
-
-ReactDOM.render(<div>tttt</div>,
-    document.getElementsById('mountNode')
-);
+ReactDOM.render(){
+    <div>anytao</div>,document.getElementsById('mountNode')
+};
 
