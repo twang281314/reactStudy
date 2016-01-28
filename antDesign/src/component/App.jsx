@@ -3,7 +3,7 @@ import {DatePicker,message} from 'antd';
 
 const App=React.createClass({
     getInitialState(){
-        retturn {
+        return {
            date: '' 
         };
     },
