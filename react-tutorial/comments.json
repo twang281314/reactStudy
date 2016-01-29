@@ -38,5 +38,55 @@
         "id": 1453471067367,
         "author": "😜😣😳😓😓😣",
         "text": "哈哈"
+    },
+    {
+        "id": 1453471352403,
+        "author": "hhhh",
+        "text": "hhh"
+    },
+    {
+        "id": 1453472151692,
+        "author": "go",
+        "text": "getInitialState  // 初始化 state getDefaultProps  // 设置默认的 props，如果外部没用传递props则使用默认的props componentWillMount  // 组件即将 Render 之前，不经常用到 render componentDidMount   // 组件第一次 Render 之后 componentWillReceiveProps(nextProps)        // 组件接收到新的 props，要被 update 时。这个方法最大的作用就是你需要在 props 被更新的同时更新 state，调用 this.setState 方法不会触发两次 Render 事件 shouldComponentUpdate(nextProps, nextState)         // 你拿到即将被接收的两种状态，与现在的进行对比，你可以返回 false 来阻止这次组件被 update。当你 App 逻辑复杂，使用 Redux 传递对象时，你会经常用到这个方法。 componentWillUpdate(nextProps, nextState)   // 组件即将被更新，不经常用到，不应该在此处更新内部状态 state render componentDidUpdate(nextProps, nextState) // 当组件被更新之后，你可以在此处触发动画 componentWillUnmount    // 组件将被移除时，你可以在此处销毁setTimeInterval变量等。"
+    },
+    {
+        "id": 1453525761412,
+        "author": "hh",
+        "text": "hh"
+    },
+    {
+        "id": 1453525776610,
+        "author": "hhhhhhhhhhhhhhhhh",
+        "text": "yyyyyyyyyyyyyyyyy"
+    },
+    {
+        "id": 1453526145424,
+        "author": "gg",
+        "text": "gg"
+    },
+    {
+        "id": 1453526150625,
+        "author": "gaffa",
+        "text": "faff"
+    },
+    {
+        "id": 1453526349752,
+        "author": "anytao",
+        "text": "8888"
+    },
+    {
+        "id": 1453540919099,
+        "author": "tt",
+        "text": "u"
+    },
+    {
+        "id": 1453696938437,
+        "author": "本来就是",
+        "text": "鬼"
+    },
+    {
+        "id": 1453697014036,
+        "author": "屌炸天啊",
+        "text": "react.js"
     }
 ]
