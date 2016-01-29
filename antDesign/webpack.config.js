@@ -1,13 +1,12 @@
 var webpack = require('webpack');
 var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.js');
+var path=require('path');
 
 module.exports = {
-    entry: {
-        entry1: './main.js'
-    },
+    entry: './main.js',
     output: {
-        //path: './build',
-        filename: 'entry.js'
+        path: path.join(__dirname,'dist'),
+        filename: '[name].bundle.js'
     },
     resolve: {
         extensions: ['', '.js', '.jsx']
@@ -21,7 +20,10 @@ module.exports = {
         }, {
              test: /\.jsx$/,
              exclude: /node_modules/,
-             loader: 'babel-loader!jsx-loader?harmony'
+             loader: 'jsx-loader!babel-loader'
+        },{
+            test: /\.css$/,
+			loaders: ['style-loader', 'css-loader']
         }]
     },
     plugins: [commonsPlugin]

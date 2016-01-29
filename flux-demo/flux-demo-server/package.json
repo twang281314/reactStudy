@@ -10,7 +10,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+<<<<<<< HEAD
+=======
     "bluebird": "^3.1.4",
+>>>>>>> 87119fa366eff9fb5e65accabf522c6fed5fbe70
     "koa": "1.0.0",
     "koa-logger": "1.3.0",
     "koa-router": "5.2.0"

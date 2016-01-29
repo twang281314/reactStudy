@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './src/component/App.jsx'
 
-var App=require('./src/component/App.jsx');
-
-ReactDOM.render(<div>tttt</div>,
-    document.getElementsById('mountNode')
+ReactDOM.render(
+    <App />,
+    document.getElementById('mountNode')
 );
 
