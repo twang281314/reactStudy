@@ -6,99 +6,159 @@ webpackJsonp([0,1],[
 
 	var _antd = __webpack_require__(1);
 
-	var _reactDom = __webpack_require__(160);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	var _react = __webpack_require__(3);
-
-	var _react2 = _interopRequireDefault(_react);
-
 	__webpack_require__(471);
 
 	__webpack_require__(475);
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	var SubMenu = _antd.Menu.SubMenu;
 
-	var columns = [{
-	  title: '姓名',
-	  dataIndex: 'name'
-	}, {
-	  title: '年龄',
-	  dataIndex: 'age'
-	}, {
-	  title: '住址',
-	  dataIndex: 'address'
-	}];
-
-	var data = [];
-	for (var i = 0; i < 46; i++) {
-	  data.push({
-	    key: i,
-	    name: '李大嘴' + i,
-	    age: 32,
-	    address: '西湖区湖底公园' + i + '号'
-	  });
-	}
-
-	var App = _react2.default.createClass({
-	  displayName: 'App',
-	  getInitialState: function getInitialState() {
-	    return {
-	      selectedRowKeys: [],
-	      loading: false
-	    };
-	  },
-	  start: function start() {
-	    var _this = this;
-
-	    this.setState({ loading: true });
-	    // 模拟 ajax 请求，完成后清空
-	    setTimeout(function () {
-	      _this.setState({
-	        selectedRowKeys: [],
-	        loading: false
-	      });
-	    }, 1000);
-	  },
-	  onSelectChange: function onSelectChange(selectedRowKeys) {
-	    console.log('selectedRowKeys changed: ', selectedRowKeys);
-	    this.setState({ selectedRowKeys: selectedRowKeys });
-	  },
-	  render: function render() {
-	    var _state = this.state;
-	    var loading = _state.loading;
-	    var selectedRowKeys = _state.selectedRowKeys;
-
-	    var rowSelection = {
-	      selectedRowKeys: selectedRowKeys,
-	      onChange: this.onSelectChange
-	    };
-	    var hasSelected = selectedRowKeys.length > 0;
-	    return _react2.default.createElement(
-	      'div',
-	      null,
-	      _react2.default.createElement(
-	        'div',
-	        { style: { marginBottom: 16 } },
-	        _react2.default.createElement(
-	          _antd.Button,
-	          { type: 'primary', onClick: this.start,
-	            disabled: !hasSelected, loading: loading },
-	          '操作'
+	ReactDOM.render(React.createElement(
+	  'div',
+	  { className: 'ant-layout-aside' },
+	  React.createElement(
+	    'aside',
+	    { className: 'ant-layout-sider' },
+	    React.createElement('div', { className: 'ant-layout-logo' }),
+	    React.createElement(
+	      _antd.Menu,
+	      { mode: 'inline', theme: 'dark',
+	        defaultSelectedKeys: ['1'], defaultOpenKeys: ['sub1'] },
+	      React.createElement(
+	        SubMenu,
+	        { key: 'sub1', title: React.createElement(
+	            'span',
+	            null,
+	            React.createElement(_antd.Icon, { type: 'user' }),
+	            '导航一'
+	          ) },
+	        React.createElement(
+	          _antd.Menu.Item,
+	          { key: '1' },
+	          '选项1'
 	        ),
-	        _react2.default.createElement(
-	          'span',
-	          { style: { marginLeft: 8 } },
-	          hasSelected ? '选择了 ' + selectedRowKeys.length + ' 个对象' : ''
+	        React.createElement(
+	          _antd.Menu.Item,
+	          { key: '2' },
+	          '选项2'
+	        ),
+	        React.createElement(
+	          _antd.Menu.Item,
+	          { key: '3' },
+	          '选项3'
+	        ),
+	        React.createElement(
+	          _antd.Menu.Item,
+	          { key: '4' },
+	          '选项4'
 	        )
 	      ),
-	      _react2.default.createElement(_antd.Table, { rowSelection: rowSelection, columns: columns, dataSource: data })
-	    );
-	  }
-	});
-
-	_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('mountNode'));
+	      React.createElement(
+	        SubMenu,
+	        { key: 'sub2', title: React.createElement(
+	            'span',
+	            null,
+	            React.createElement(_antd.Icon, { type: 'laptop' }),
+	            '导航二'
+	          ) },
+	        React.createElement(
+	          _antd.Menu.Item,
+	          { key: '5' },
+	          '选项5'
+	        ),
+	        React.createElement(
+	          _antd.Menu.Item,
+	          { key: '6' },
+	          '选项6'
+	        ),
+	        React.createElement(
+	          _antd.Menu.Item,
+	          { key: '7' },
+	          '选项7'
+	        ),
+	        React.createElement(
+	          _antd.Menu.Item,
+	          { key: '8' },
+	          '选项8'
+	        )
+	      ),
+	      React.createElement(
+	        SubMenu,
+	        { key: 'sub3', title: React.createElement(
+	            'span',
+	            null,
+	            React.createElement(_antd.Icon, { type: 'notification' }),
+	            '导航三'
+	          ) },
+	        React.createElement(
+	          _antd.Menu.Item,
+	          { key: '9' },
+	          '选项9'
+	        ),
+	        React.createElement(
+	          _antd.Menu.Item,
+	          { key: '10' },
+	          '选项10'
+	        ),
+	        React.createElement(
+	          _antd.Menu.Item,
+	          { key: '11' },
+	          '选项11'
+	        ),
+	        React.createElement(
+	          _antd.Menu.Item,
+	          { key: '12' },
+	          '选项12'
+	        )
+	      )
+	    )
+	  ),
+	  React.createElement(
+	    'div',
+	    { className: 'ant-layout-main' },
+	    React.createElement('div', { className: 'ant-layout-header' }),
+	    React.createElement(
+	      'div',
+	      { className: 'ant-layout-breadcrumb' },
+	      React.createElement(
+	        _antd.Breadcrumb,
+	        null,
+	        React.createElement(
+	          _antd.Breadcrumb.Item,
+	          null,
+	          '首页'
+	        ),
+	        React.createElement(
+	          _antd.Breadcrumb.Item,
+	          null,
+	          '应用列表'
+	        ),
+	        React.createElement(
+	          _antd.Breadcrumb.Item,
+	          null,
+	          '某应用'
+	        )
+	      )
+	    ),
+	    React.createElement(
+	      'div',
+	      { className: 'ant-layout-container' },
+	      React.createElement(
+	        'div',
+	        { className: 'ant-layout-content' },
+	        React.createElement(
+	          'div',
+	          { style: { height: 590 } },
+	          '内容区域'
+	        )
+	      )
+	    ),
+	    React.createElement(
+	      'div',
+	      { className: 'ant-layout-footer' },
+	      'Ant Design 版权所有 © 2015 由蚂蚁金服体验技术部支持'
+	    )
+	  )
+	), mountNode);
 
 /***/ },
 /* 1 */

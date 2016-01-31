@@ -16,7 +16,7 @@ gulp.task("webpack", function() {
     return gulp
         .src('./')
         .pipe(webpack(webpackConfig))
-        .pipe(gulp.dest('./build'));
+        .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('default',['connect','webpack']);
