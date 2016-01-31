@@ -1,5 +1,5 @@
 'use strict'
-import React from 'react';
+import React,{Component} from 'react';
 import ReactDOM from  'react-dom';
 import { Table } from 'antd';
 
@@ -31,19 +31,20 @@ const data = [{
   address: '西湖区湖底公园1号'
 }];
 
-const App=React.createClass({
+class MyTable extends Component{
+    
     getInitialState(){
         return {
            columns: columns,
            data:data
         };
-    },
+    }
     handleChange(value){
         this.setState({
             columns: columns,
             data:data
         });
-    },
+    }
     render(){
        return <div>
                 <h4>中号表格（紧凑型）</h4>
@@ -52,6 +53,5 @@ const App=React.createClass({
                 <Table columns={columns} dataSource={data} size="small" />
               </div>
     }
-});
-
-export default Table;
+}
+export default MyTable;

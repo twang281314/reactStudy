@@ -12,3 +12,6 @@ http://segmentfault.com/a/1190000002507327
 
 
 http://webpack.github.io/docs/using-loaders.html
+
+React+Webpack快速上手指南
+http://www.jianshu.com/p/418e48e0cef1

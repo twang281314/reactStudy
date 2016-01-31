@@ -18,87 +18,14 @@ webpackJsonp([0,1],[
 
 	__webpack_require__(475);
 
+	var _MyTable = __webpack_require__(477);
+
+	var _MyTable2 = _interopRequireDefault(_MyTable);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var columns = [{
-	  title: '姓名',
-	  dataIndex: 'name'
-	}, {
-	  title: '年龄',
-	  dataIndex: 'age'
-	}, {
-	  title: '住址',
-	  dataIndex: 'address'
-	}];
-
-	var data = [];
-	for (var i = 0; i < 46; i++) {
-	  data.push({
-	    key: i,
-	    name: '李大嘴' + i,
-	    age: 32,
-	    address: '西湖区湖底公园' + i + '号'
-	  });
-	}
-
-	var App = _react2.default.createClass({
-	  displayName: 'App',
-	  getInitialState: function getInitialState() {
-	    return {
-	      selectedRowKeys: [],
-	      loading: false
-	    };
-	  },
-	  start: function start() {
-	    var _this = this;
-
-	    this.setState({ loading: true });
-	    // 模拟 ajax 请求，完成后清空
-	    setTimeout(function () {
-	      _this.setState({
-	        selectedRowKeys: [],
-	        loading: false
-	      });
-	    }, 1000);
-	  },
-	  onSelectChange: function onSelectChange(selectedRowKeys) {
-	    console.log('selectedRowKeys changed: ', selectedRowKeys);
-	    this.setState({ selectedRowKeys: selectedRowKeys });
-	  },
-	  render: function render() {
-	    var _state = this.state;
-	    var loading = _state.loading;
-	    var selectedRowKeys = _state.selectedRowKeys;
-
-	    var rowSelection = {
-	      selectedRowKeys: selectedRowKeys,
-	      onChange: this.onSelectChange
-	    };
-	    var hasSelected = selectedRowKeys.length > 0;
-	    return _react2.default.createElement(
-	      'div',
-	      null,
-	      _react2.default.createElement(
-	        'div',
-	        { style: { marginBottom: 16 } },
-	        _react2.default.createElement(
-	          _antd.Button,
-	          { type: 'primary', onClick: this.start,
-	            disabled: !hasSelected, loading: loading },
-	          '操作'
-	        ),
-	        _react2.default.createElement(
-	          'span',
-	          { style: { marginLeft: 8 } },
-	          hasSelected ? '选择了 ' + selectedRowKeys.length + ' 个对象' : ''
-	        )
-	      ),
-	      _react2.default.createElement(_antd.Table, { rowSelection: rowSelection, columns: columns, dataSource: data })
-	    );
-	  }
-	});
-
-	_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('mountNode'));
+	_reactDom2.default.render(_react2.default.createElement(_MyTable2.default, null), document.getElementById('mountNode'));
+	//import { Table,Button } from 'antd';
 
 /***/ },
 /* 1 */
@@ -59641,6 +59568,116 @@ webpackJsonp([0,1],[
 
 	// exports
 
+
+/***/ },
+/* 477 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(3);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(160);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _antd = __webpack_require__(1);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var columns = [{
+	  title: '姓名',
+	  dataIndex: 'name'
+	}, {
+	  title: '年龄',
+	  dataIndex: 'age'
+	}, {
+	  title: '住址',
+	  dataIndex: 'address'
+	}];
+
+	var data = [{
+	  key: '1',
+	  name: '胡彦斌',
+	  age: 32,
+	  address: '西湖区湖底公园1号'
+	}, {
+	  key: '2',
+	  name: '胡彦祖',
+	  age: 42,
+	  address: '西湖区湖底公园1号'
+	}, {
+	  key: '3',
+	  name: '李大嘴',
+	  age: 32,
+	  address: '西湖区湖底公园1号'
+	}];
+
+	var MyTable = function (_Component) {
+	  _inherits(MyTable, _Component);
+
+	  function MyTable() {
+	    _classCallCheck(this, MyTable);
+
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(MyTable).apply(this, arguments));
+	  }
+
+	  _createClass(MyTable, [{
+	    key: 'getInitialState',
+	    value: function getInitialState() {
+	      return {
+	        columns: columns,
+	        data: data
+	      };
+	    }
+	  }, {
+	    key: 'handleChange',
+	    value: function handleChange(value) {
+	      this.setState({
+	        columns: columns,
+	        data: data
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'h4',
+	          null,
+	          '中号表格（紧凑型）'
+	        ),
+	        _react2.default.createElement(_antd.Table, { columns: columns, dataSource: data, size: 'middle' }),
+	        _react2.default.createElement(
+	          'h4',
+	          null,
+	          '小号表格'
+	        ),
+	        _react2.default.createElement(_antd.Table, { columns: columns, dataSource: data, size: 'small' })
+	      );
+	    }
+	  }]);
+
+	  return MyTable;
+	}(_react.Component);
+
+	exports.default = MyTable;
 
 /***/ }
 ]);
