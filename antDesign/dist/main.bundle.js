@@ -18,14 +18,171 @@ webpackJsonp([0,1],[
 
 	__webpack_require__(475);
 
-	var _MyTable = __webpack_require__(477);
-
-	var _MyTable2 = _interopRequireDefault(_MyTable);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	_reactDom2.default.render(_react2.default.createElement(_MyTable2.default, null), document.getElementById('mountNode'));
+	var SubMenu = _antd.Menu.SubMenu;
+
+	var TabPane = _antd.Tabs.TabPane;
+
+	function callback(key) {
+	  console.log(key);
+	}
+
+	function onClick(item, keyValue) {
+	  console.log(item);
+	  console.log(keyValue);
+	}
 	//import { Table,Button } from 'antd';
+	//import Table from './src/component/MyTable.jsx';
+
+	//ReactDOM.render(<Table />,  document.getElementById('mountNode'));
+	_reactDom2.default.render(_react2.default.createElement(
+	  'div',
+	  { className: 'ant-layout-aside' },
+	  _react2.default.createElement(
+	    'aside',
+	    { className: 'ant-layout-sider' },
+	    _react2.default.createElement('div', { className: 'ant-layout-logo' }),
+	    _react2.default.createElement(
+	      _antd.Menu,
+	      { mode: 'inline', theme: 'dark', onClick: onClick,
+	        defaultSelectedKeys: ['1'], defaultOpenKeys: ['sub1'] },
+	      _react2.default.createElement(
+	        SubMenu,
+	        { key: 'sub1', title: _react2.default.createElement(
+	            'span',
+	            null,
+	            _react2.default.createElement(_antd.Icon, { type: 'user' }),
+	            '导航一'
+	          ) },
+	        _react2.default.createElement(
+	          _antd.Menu.Item,
+	          { key: '1', href: 'index.html' },
+	          '选项1'
+	        ),
+	        _react2.default.createElement(
+	          _antd.Menu.Item,
+	          { key: '2' },
+	          '选项2'
+	        ),
+	        _react2.default.createElement(
+	          _antd.Menu.Item,
+	          { key: '3' },
+	          '选项3'
+	        ),
+	        _react2.default.createElement(
+	          _antd.Menu.Item,
+	          { key: '4' },
+	          '选项4'
+	        )
+	      ),
+	      _react2.default.createElement(
+	        SubMenu,
+	        { key: 'sub2', title: _react2.default.createElement(
+	            'span',
+	            null,
+	            _react2.default.createElement(_antd.Icon, { type: 'laptop' }),
+	            '导航二'
+	          ) },
+	        _react2.default.createElement(
+	          _antd.Menu.Item,
+	          { key: '5' },
+	          '选项5'
+	        ),
+	        _react2.default.createElement(
+	          _antd.Menu.Item,
+	          { key: '6' },
+	          '选项6'
+	        ),
+	        _react2.default.createElement(
+	          _antd.Menu.Item,
+	          { key: '7' },
+	          '选项7'
+	        ),
+	        _react2.default.createElement(
+	          _antd.Menu.Item,
+	          { key: '8' },
+	          '选项8'
+	        )
+	      ),
+	      _react2.default.createElement(
+	        SubMenu,
+	        { key: 'sub3', title: _react2.default.createElement(
+	            'span',
+	            null,
+	            _react2.default.createElement(_antd.Icon, { type: 'notification' }),
+	            '导航三'
+	          ) },
+	        _react2.default.createElement(
+	          _antd.Menu.Item,
+	          { key: '9' },
+	          '选项9'
+	        ),
+	        _react2.default.createElement(
+	          _antd.Menu.Item,
+	          { key: '10' },
+	          '选项10'
+	        ),
+	        _react2.default.createElement(
+	          _antd.Menu.Item,
+	          { key: '11' },
+	          '选项11'
+	        ),
+	        _react2.default.createElement(
+	          _antd.Menu.Item,
+	          { key: '12' },
+	          '选项12'
+	        )
+	      )
+	    )
+	  ),
+	  _react2.default.createElement(
+	    'div',
+	    { className: 'ant-layout-main' },
+	    _react2.default.createElement('div', { className: 'ant-layout-header' }),
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'ant-layout-breadcrumb' },
+	      _react2.default.createElement(
+	        _antd.Tabs,
+	        { onChange: callback, type: 'card' },
+	        _react2.default.createElement(
+	          TabPane,
+	          { tab: '选项卡一', key: '1' },
+	          '选项卡一内容'
+	        ),
+	        _react2.default.createElement(
+	          TabPane,
+	          { tab: '选项卡二', key: '2' },
+	          '选项卡二内容'
+	        ),
+	        _react2.default.createElement(
+	          TabPane,
+	          { tab: '选项卡三', key: '3' },
+	          '选项卡三内容'
+	        )
+	      )
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'ant-layout-container' },
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'ant-layout-content' },
+	        _react2.default.createElement(
+	          'div',
+	          { style: { height: 590 } },
+	          '内容区域'
+	        )
+	      )
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'ant-layout-footer' },
+	      'Ant Design 版权所有 © 2015 由蚂蚁金服体验技术部支持'
+	    )
+	  )
+	), document.getElementById('mountNode'));
 
 /***/ },
 /* 1 */
@@ -59568,116 +59725,6 @@ webpackJsonp([0,1],[
 
 	// exports
 
-
-/***/ },
-/* 477 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(3);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(160);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	var _antd = __webpack_require__(1);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var columns = [{
-	  title: '姓名',
-	  dataIndex: 'name'
-	}, {
-	  title: '年龄',
-	  dataIndex: 'age'
-	}, {
-	  title: '住址',
-	  dataIndex: 'address'
-	}];
-
-	var data = [{
-	  key: '1',
-	  name: '胡彦斌',
-	  age: 32,
-	  address: '西湖区湖底公园1号'
-	}, {
-	  key: '2',
-	  name: '胡彦祖',
-	  age: 42,
-	  address: '西湖区湖底公园1号'
-	}, {
-	  key: '3',
-	  name: '李大嘴',
-	  age: 32,
-	  address: '西湖区湖底公园1号'
-	}];
-
-	var MyTable = function (_Component) {
-	  _inherits(MyTable, _Component);
-
-	  function MyTable() {
-	    _classCallCheck(this, MyTable);
-
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(MyTable).apply(this, arguments));
-	  }
-
-	  _createClass(MyTable, [{
-	    key: 'getInitialState',
-	    value: function getInitialState() {
-	      return {
-	        columns: columns,
-	        data: data
-	      };
-	    }
-	  }, {
-	    key: 'handleChange',
-	    value: function handleChange(value) {
-	      this.setState({
-	        columns: columns,
-	        data: data
-	      });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'h4',
-	          null,
-	          '中号表格（紧凑型）'
-	        ),
-	        _react2.default.createElement(_antd.Table, { columns: columns, dataSource: data, size: 'middle' }),
-	        _react2.default.createElement(
-	          'h4',
-	          null,
-	          '小号表格'
-	        ),
-	        _react2.default.createElement(_antd.Table, { columns: columns, dataSource: data, size: 'small' })
-	      );
-	    }
-	  }]);
-
-	  return MyTable;
-	}(_react.Component);
-
-	exports.default = MyTable;
 
 /***/ }
 ]);
