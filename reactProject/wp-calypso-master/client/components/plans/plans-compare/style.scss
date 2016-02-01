@@ -1,0 +1,17 @@
+.plan-feature-column {
+	display: inline-block;
+	font-size: .9em;
+	vertical-align: top;
+	width: 25%;
+
+	.feature-list {
+		text-align: left;
+	}
+}
+
+.plans-compare__free-trial-exception-message {
+	font-size: .8em;
+	font-style: italic;
+	text-align: right;
+	margin-top: 15px;
+}

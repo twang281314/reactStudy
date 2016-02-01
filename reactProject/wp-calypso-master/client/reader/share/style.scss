@@ -1,0 +1,78 @@
+.reader-share {
+	display: inline-block;
+	padding: 4px 4px 4px 32px;
+	color: lighten( $gray, 10 );
+	position: relative;
+	box-sizing: border-box;
+	transition: color 0.15s linear;
+	cursor: pointer;
+	min-height: 32px;
+
+	&:hover, &:focus, &:active {
+		cursor: pointer;
+		color: $blue-light;
+	}
+
+	.gridicon {
+		transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+		position: absolute;
+			top: 3px;
+			left: 3px;
+	}
+
+	.is-active {
+		color: $blue-dark;
+
+		.gridicon {
+			transform: rotate( 90deg );
+		}
+	}
+}
+
+@include breakpoint( "<480px" ) {
+	.reader-share .gridicon {
+		left: 6px;
+	}
+	
+	.reader-share__button-label {
+		display: none;
+	}
+}
+
+.reader-share__popover-item {
+	span {
+		display: inline-block;
+		line-height: 24px;
+		margin-left: 32px;
+	}
+	.gridicon,
+	.social-logo {
+		height: 24px;
+		width: 24px;
+		position: absolute;
+			top: 8px;
+			left: 16px;
+		padding: 0;
+		fill: $gray;
+	}
+
+	.gridicons-my-sites {
+		fill: $blue-wordpress;
+	}
+
+	.social-logo.twitter {
+		fill: #2aa9e0;
+	}
+
+	.social-logo.facebook {
+		fill: #3B5998;
+	}
+
+	&:hover,
+	&:focus {
+		.gridicon,
+		.social-logo {
+			fill: $white;
+		}
+	}
+}

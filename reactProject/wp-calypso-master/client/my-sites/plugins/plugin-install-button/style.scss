@@ -1,0 +1,82 @@
+.plugin-install-button__install {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+
+	.button {
+		position: relative;
+
+		.gridicons-plus-small {
+			position: absolute;
+			top: 9px;
+			left: 0px;
+			margin-left: 4px;
+			height: 12px;
+			width: 12px;
+		}
+		&:active .gridicons-plus-small {
+			top: 9.5px;
+		}
+	}
+	.gridicon {
+		margin-left: 4px;
+		margin-right: 4px;
+	}
+
+	.gridicons-plus-small {
+		position: absolute;
+		top: 9px;
+		left: 0px;
+		margin-left: 4px;
+		height: 12px;
+		width: 12px;
+	}
+
+	&.embed {
+			color: $gray;
+			height: 100%;
+			position: initial;
+			margin-right: 16px;
+		}
+
+	@include breakpoint( "<480px" ) {
+
+		position: relative;
+
+		&.embed {
+			position: absolute;
+		}
+		.button {
+			width: 100%;
+			text-align: center;
+		}
+	}
+
+	.plugin-install-button__installing {
+		font-size: 10px;
+		color: $gray;
+		text-transform: uppercase;
+		display: block;
+	}
+
+	&.has-warning {
+		display: flex;
+		align-content: space-between;
+
+		a {
+			font-size: 10px;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.plugin-install-button__warning {
+	margin-right: 8px;
+	font-size: 10px;
+	color:  $gray;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
