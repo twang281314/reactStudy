@@ -1,0 +1,359 @@
+/* == BASE ================================================================= */
+
+body {
+  font-size: 16px;
+  color: #696d75;
+}
+
+input[type=text], textarea {
+  border-radius: 4px;
+  border: 1px solid #BDBDBD;
+  background: #fff;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  padding: 8px 10px;
+}
+
+input[type=text]:focus, textarea:focus {
+  outline: none;
+  border: 1px solid #4ABFE2;
+}
+
+input[type=text].small {
+  font-size: 12px;
+  padding: 4px 5px;
+}
+
+a {
+  cursor: pointer;
+}
+
+/* == COMPONENTS =========================================================== */
+
+/* .survey-table ----------------------------------------------------------- */
+.survey-table > thead > tr > th {
+  border: none;
+  color: #c6c6c6;
+  font-weight: normal;
+}
+
+.survey-table > tbody > tr > td {
+  border: none;
+}
+
+.survey-table .btn-editSurvey {
+  color: #f5a623;
+}
+
+.survey-table .btn-deleteSurvey {
+  color: red;
+}
+
+/* .divider ---------------------------------------------------------------- */
+.divider {
+  width: 100%;
+  position: relative;
+  margin: 24px 0;
+}
+
+.divider h2 {
+  background: white;
+  position: relative;
+  float: left;
+  padding-right: 12px;
+  margin: 0;
+  z-index: 1;
+}
+
+.divider hr {
+  position: absolute;
+  top: 50%;
+  height: 1px;
+  width: 100%;
+  background: #999;
+  z-index: 0;
+  margin: 0;
+}
+
+/* .survey-item -------------------------------------------------------------*/
+.survey-item {
+  margin: 48px 0;
+}
+
+.survey-item-label {
+  color: #4abfe2;
+  margin-bottom: 12px;
+}
+
+.survey-item-content {
+  margin-left: 24px;
+}
+
+/* .form-control ------------------------------------------------------------*/
+
+.form-control:focus {
+  border-color: #4abfe2;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(74, 191, 226, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(74, 191, 226, 0.6);
+}
+
+/* .well ------------------------------------------------------------------- */
+.well.well-active {
+  background: #fff;
+  border: 2px solid #4abfe2;
+}
+
+.well.well-active label {
+  color: #4abfe2;
+}
+
+.well.well .close {
+  font-size: 12px;
+  background: #aaa;
+  border-radius: 100%;
+  height: 20px;
+  width: 20px;
+  color: white;
+  margin-top: -12px;
+  margin-right: -12px;
+}
+
+.well.well .close:focus {
+  outline: none;
+}
+
+.well.well-drop-zone {
+  background: #f5fcf2;
+  border-color: #b5b5b5;
+  border-style: dashed;
+  text-align: center;
+  color: #b5b5b5;
+}
+
+/* .btn -------------------------------------------------------------------- */
+.btn .glyphicon {
+  margin-right: 7px;
+}
+
+.btn-primary {
+  color: #396a01;
+  background-color: #7ed321;
+  border-color: #7ed321;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.open>.dropdown-toggle.btn-primary {
+  color: #396a01;
+  background-color: #7ed321;
+  border-color: #7ed321;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open>.dropdown-toggle.btn-primary {
+  color: #396a01;
+  background-color: #7ed321;
+  border-color: #7ed321;
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: #4abfe2;
+  border-color: #4abfe2;
+}
+
+.btn-secondary:active,
+.btn-secondary.active,
+.open>.dropdown-toggle.btn-secondary {
+  color: #fff;
+  background-color: #4abfe2;
+  border-color: #4abfe2;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active,
+.btn-secondary.active,
+.open>.dropdown-toggle.btn-secondary {
+  color: #fff;
+  background-color: #4abfe2;
+  border-color: #4abfe2;
+}
+
+.btn-secondary .glyphicon {
+  color: #4195af;
+}
+
+/* .sidebar ---------------------------------------------------------------- */
+.sidebar {
+  background: #F2F2F2;
+}
+
+/* .brand ------------------------------------------------------------------- */
+.brand {
+  margin: 24px;
+  line-height: 1;
+}
+
+.brand-lead {
+  color: #c6c6c6;
+  font-size: 14px;
+}
+
+.brand-name {
+  font-family: serif;
+  color: #737373;
+  font-size: 28px;
+}
+
+
+/* .survey-editor ---------------------------------------------------------- */
+.survey-editor .modules li {
+  margin-bottom: 15px;
+}
+.survey-editor .modules .btn {
+  width: 100%;
+  text-align: left;
+}
+
+.survey-editor .actions {
+  margin-top: 30px;
+  text-align: right;
+}
+
+.survey-editor .drop-zone {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.survey-editor .drop-zone.drag-enter {
+  border: 1px solid #7ED321;
+  background: #7ED321;
+  color: #417505;
+}
+
+.survey-editor input[type=text], .survey-editor textarea {
+  width: 100%;
+}
+
+.survey-editor .question-enter {
+  transform: scale(1.2);
+  transition: transform 0.2s cubic-bezier(.97,.84,.5,1.21);
+}
+.survey-editor .question-enter-active {
+  transform: scale(1);
+}
+
+.survey-editor .question-leave {
+  transform: translateY(0);
+  opacity: 0;
+  transition: opacity 1.2s, transform 1s cubic-bezier(.52,-0.25,.52,.95);
+}
+
+.survey-editor .question-leave-active {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+/* .edit-question ---------------------------------------------------------- */
+.edit-question .type {
+  color: #fff;
+  background: #4abfe2;
+  margin: -20px -20px 0;
+  padding: 7px 20px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  position: relative;
+}
+.edit-question .type .remove {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 8px;
+}
+
+.edit-question label {
+  display: block;
+}
+
+/* .edit-question.multiple-choice ------------------------------------------ */
+.edit-question.edit-multiple-choice .description {
+  margin-bottom: 15px;
+}
+.edit-question.edit-multiple-choice .options {
+  margin-left: 30px;
+}
+
+.edit-question.edit-multiple-choice .options .option {
+  margin-bottom: 7px;
+}
+
+.edit-question.edit-multiple-choice .remove-option {
+  font-size: 12px;
+  color: #ddd;
+  margin-left: 7px;
+}
+.edit-question.edit-multiple-choice .remove-option:hover {
+  color: #D0021B;
+
+}
+.edit-question.edit-multiple-choice .add-option a {
+  font-size: 12px;
+  color: #7ed321;
+}
+.edit-question.edit-multiple-choice .add-option a .glyphicon {
+  margin-right: 7px;
+}
+.edit-question.edit-multiple-choice .add-option a:hover {
+  color: #396a01;
+}
+
+.edit-question.edit-multiple-choice input.small {
+  width: 200px;
+}
+
+/* .draggable -------------------------------------------------------------- */
+.draggable {
+  cursor: move;
+}
+
+/* .main-header ------------------------------------------------------------ */
+.main-header {
+  background: #696D75;
+  border: 0;
+  margin-bottom: 0;
+}
+
+.main-header a {
+  color: #ffffff;
+}
+
+.main-header .logo {
+  font-family: 'Glegoo', sans-serif;
+  font-size: 24px;
+  margin-left: 0;
+}
+
+/* .main-nav --------------------------------------------------------------- */
+.main-nav li a {
+  padding: 15px 0;
+  margin: 0 15px;
+}
+
+.main-nav li a:hover {
+  background-color: transparent;
+  border-bottom: 5px solid #A9D0DC;
+}
+
+.main-nav a.active {
+  border-bottom: 5px solid #4ABFE2;
+  font-weight: bold;
+}
+
+.main-nav a.active:hover {
+  border-bottom: 5px solid #4ABFE2;
+}
