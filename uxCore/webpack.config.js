@@ -1,9 +1,8 @@
 var webpack = require('webpack');
-var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.js');
 var path=require('path');
 
 module.exports = {
-    entry: './crud.js',
+    entry: './index.js',
     output: {
         path: path.join(__dirname,'dist'),
         filename: '[name].bundle.js'
@@ -13,16 +12,26 @@ module.exports = {
     },
     module: {
         loaders: [{
-            test: /\.js$/,
-            exclude: /node_modules/,
-            loader: 'babel-loader'
-          
+            test: /\.js(x)*$/,
+            //test: /\.js$/,
+            // uxcore以外的modules都不需要经过babel解析
+            exclude: function (path) {
+                var isNpmModule = !!path.match(/node_modules/);
+                var isUxcore = !!path.match(/node_modules\/uxcore/) || !!path.match(/node_modules\/@ali\/uxcore/);
+                return isNpmModule & !isUxcore;
+            },
+            loader: 'babel-loader?stage=1',
+            query: {
+                presets: ['es2015','react']
+            }
+                        
         }, {
              test: /\.jsx$/,
              exclude: /node_modules/,
              loader: 'jsx-loader!babel-loader'
         },{
             test: /\.css$/,
+            exclude: /node_modules/,
 			loaders: ['style-loader', 'css-loader']
         }]
     },

@@ -8,6 +8,8 @@
  * Uxcore 的文档站点为：http://uxco.re/
  * 这里包括了所有通用组件的使用说明。
  */
+ import ReactDOM from 'react-dom';
+ 
 let Table = require("uxcore-table");
 let Button = require('uxcore-button');
 let Form = require('uxcore-form');
@@ -221,20 +223,3 @@ ReactDOM.render(
 , document.getElementById('scene-crud-demo-basic'));
 
 /* JS END CSS START*/
-
-.page-demo3 {
-    margin-top: 20px;
-    margin-left: 20px;
-}
-
-.searchForm {
-    width: 1000px;
-}
-
-.searchButton {
-    padding: 2px 0 0 10px;
-}
-
-h2 {
-    font-size: 24px;
-}

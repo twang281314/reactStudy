@@ -1,4 +1,10 @@
     
-var Button = Uxcore.Button;
+var ReactDOM = require("react-dom");
+var React = require("react");
+var Button = require("uxcore-button");
 
-React.render(<Button>Button</Button>, document.getElementById("App"));
+
+ReactDOM.render(
+    <Button>Button</Button>,
+    document.getElementById("App")
+);
