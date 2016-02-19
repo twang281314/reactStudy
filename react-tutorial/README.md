@@ -53,3 +53,21 @@ You can change the port number by setting the `$PORT` environment variable befor
 ```sh
 PORT=3001 node server.js
 ```
+We'll provide:
+
+    A view of all of the comments
+    A form to submit a comment
+    Hooks for you to provide a custom backend
+
+It'll also have a few neat features:
+
+    Optimistic commenting: comments appear in the list before they're saved on the server so it feels fast.
+    Live updates: other users' comments are popped into the comment view in real time.
+    Markdown formatting: users can use Markdown to format their text.
+
+Project Structure
+
+- CommentBox
+  - CommentList
+    - Comment
+  - CommentForm
