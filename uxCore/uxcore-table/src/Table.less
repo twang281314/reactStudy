@@ -1,0 +1,324 @@
+/**
+ * Grid Component Style for uxcore
+ * @author zhouquan.yezq
+ *
+ * Copyright 2014-2015, Uxcore Team, Alinw.
+ * All rights reserved.
+ */
+
+@uxtable-prefix: kuma-uxtable;
+@import "./Mask.less";
+@import "./ActionBar.less";
+
+.@{uxtable-prefix} {
+    border-collapse: collapse;
+    position: relative;
+    color: #666;
+    table-layout: fixed;
+}
+
+.@{uxtable-prefix}-content {
+    overflow-x: auto;
+    position: static;
+}
+
+.@{uxtable-prefix}-content-scroller {
+    display: inline-block;
+}
+
+.@{uxtable-prefix}-header-wrapper {
+    overflow: hidden;
+    border:1px solid @table-border;
+}
+.@{uxtable-prefix}-body-wrapper {
+    border: 1px solid @table-border;
+    border-top: none;
+    min-height: 40px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.@{uxtable-prefix}-header {
+    background-color: @table-header-bg;
+    font-weight: 600;
+    min-width: 100%;
+    white-space: nowrap;
+    display: inline-block;
+    .@{uxtable-prefix}-cell.show-border {
+        border-right: 1px solid #ebebeb;
+    }
+}
+.@{uxtable-prefix}-body {
+    position:relative;
+    display: inline-block;
+    min-width: 100%;
+    min-height: 40px;
+    white-space: normal;
+    background-color: @table-body-bg;
+}
+
+.@{uxtable-prefix}-body-emptyword {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+}
+
+.@{uxtable-prefix}-row {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    border-top: 1px solid @table-border;
+    border-bottom: none;
+    line-height: 40px;
+    &:first-child {
+        border-top: none;
+    }
+}
+
+.@{uxtable-prefix}-tree-row {
+    .@{uxtable-prefix}-row{
+        border-bottom: 0px solid @table-border;
+        border-top: 1px solid @table-border;
+    }
+}
+
+.@{uxtable-prefix}-cell {
+    display: inline-block;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height:100%;
+    padding: 0 0 0 20px;
+    vertical-align: top;
+    position: relative;
+    word-break:break-all;
+    line-height:40px;
+    height: 40px;
+    & > div {
+        line-height: 40px;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: top;
+        height: 40px;
+        width: 100%;
+        white-space: nowrap;
+    }
+    input.kuma-input {
+        vertical-align: top;
+        height: 30px;
+        min-height: 28px;
+        padding: 0 10px;
+        margin-top: 5px;
+        line-height: 28px;
+    }
+    .kuma-column-picker {
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+        top:0;
+    }
+    .kuma-select2 {
+        width: 100%;
+        vertical-align: top;
+        margin-top: 5px;
+    }
+    .kuma-select2-selection {
+        height: 30px;
+    }
+}
+
+.@{uxtable-prefix}-cell-field {
+    &.hasError {
+        .kuma-input {
+            border-color: red;
+        }
+    }
+}
+
+
+.@{uxtable-prefix}-header .@{uxtable-prefix}-cell > div{
+   overflow : visible;
+}
+
+.@{uxtable-prefix}-colmnpicker {
+    max-width: 400px;
+    max-height: 300px;
+    overflow-y: auto;
+    position: absolute;
+    background-color: @table-header-bg;
+    z-index: 2;
+    right: 0;
+    top: 32px;
+    padding: 5px 20px 10px 10px;
+    display: none;
+    .kuma-tree {
+        padding: 0px;
+        li a {
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+.kuma-column-picker-container {
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    cursor: pointer;
+    padding-right: 20px;
+    font-weight: normal;
+    background: @table-header-bg;
+    &.hasGroup {
+        line-height: 80px;
+        .@{uxtable-prefix}-colmnpicker {
+            top: 50px;
+        }
+    }
+}
+
+.@{uxtable-prefix}-subrow {
+
+}
+
+.@{uxtable-prefix}-tree-icon{
+    cursor:pointer;
+    // margin-right:4px;
+    > .kuma-icon {
+        font-size: 14px;
+        color: #999999;
+    }
+}
+
+.@{uxtable-prefix}-emptyicon{
+    width:20px;
+    display:inline-block;
+}
+
+.kuma-subgrid-mode {
+    .@{uxtable-prefix}-body-wrapper {
+        border: none;
+    }
+}
+
+.@{uxtable-prefix}-page{
+    text-align: right;
+    padding: 10px 0px;
+    .kuma-select2-selection__rendered {
+        text-align: left;
+    }
+}
+
+.@{uxtable-prefix} .kuma-page {
+    display: inline-block;
+}
+
+.@{uxtable-prefix}-h-sort{
+    position:relative;
+    top: -2px;
+    margin-left: 4px;
+    i {
+        cursor: pointer;
+        width: 0;
+        height: 0;
+        border-width: 6px 5px;
+        border-style: solid;
+        position: absolute;
+        &.sort-up {
+            border-color: transparent transparent #aab2be;
+            bottom: 6px;
+            left: 2px;
+        }
+
+        &.sort-up-active {
+            border-color: transparent transparent @brand-primary;
+            bottom: 6px;
+            left: 2px;
+        }
+
+        &.sort-down {
+            border-color: #aab2be transparent transparent;
+            bottom: -9px;
+            left: 2px;
+        }
+
+
+        &.sort-down-active {
+            border-color: @brand-primary transparent transparent;
+            bottom: -9px;
+            left: 2px;
+        }
+    }
+}
+
+.action-container {
+    .action{
+        cursor: pointer;
+        display:inline-block;
+        text-decoration: none;
+        & + .action {
+            margin-left: 8px
+        }
+    }
+    .split {
+        color: #ccc;
+    }
+}
+
+
+.@{uxtable-prefix} span.indent {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.@{uxtable-prefix}-body-fixed {
+    float:left;
+    overflow:hidden;
+    z-index:1;
+    height:100%;
+}
+.@{uxtable-prefix}-body-no {
+    height: 100%;
+    overflow-y: auto;
+}
+.@{uxtable-prefix}-body-scroll {
+    position:relative;
+    border-left:1px solid @table-border;
+    float:left;
+    overflow:auto;
+    z-index:1;
+    height:100%;
+}
+
+.@{uxtable-prefix}-header-fixed {
+    float:left;
+    overflow:hidden;
+    z-index:1;
+    height:100%;
+}
+.@{uxtable-prefix}-header-no {
+    overflow: hidden;
+}
+.@{uxtable-prefix}-header-scroll {
+    position:static;
+    border-left:1px solid @table-border;
+    float:left;
+    overflow-x: hidden;
+    z-index:1;
+    height:100%;
+    .@{uxtable-prefix}-header {
+        background-color: @table-header-scroll-bg;
+    }
+}
+
+.@{uxtable-prefix}-header-column-group {
+    display: inline-block;
+}
+
+.@{uxtable-prefix}-header-group-name {
+    line-height: 40px;
+    text-align: center;
+    border-bottom: 1px solid @table-border;
+    border-right: 1px solid @table-border;
+}
