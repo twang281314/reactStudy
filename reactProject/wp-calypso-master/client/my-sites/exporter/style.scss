@@ -1,0 +1,77 @@
+.section-export {
+	padding-bottom: 100px;
+}
+
+.exporter__title {
+	margin-bottom: 0.5em;
+
+	font-size: 24px;
+	font-weight: 300;
+	color: $gray-dark;
+
+	clear: left;
+}
+
+.exporter__subtitle {
+	font-size: 11px;
+	color: $gray-dark;
+}
+
+.exporter__spinner-button {
+	float: right;
+	padding: 8px;
+}
+
+.exporter__export-button {
+	float: right;
+}
+
+.exporter__advanced-settings {
+	padding-bottom: 50px;
+}
+
+.exporter__advanced-settings-title {
+	margin-bottom: 0.5em;
+
+	font-size: 22px;
+	font-weight: 200;
+	color: $gray-dark;
+}
+
+.exporter__advanced-settings-row {
+	@include breakpoint( ">960px" ) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+.exporter__option-fieldset {
+	margin-top: 10px;
+
+	@include breakpoint( ">960px" ) {
+		margin-top: inherit;
+		flex: 1;
+	}
+}
+
+// The following specificity is required to override the form-label selector:
+// .form-label input[type="checkbox"] + span { font-weight: normal }
+.exporter__option-fieldset-legend .exporter__option-fieldset-legend-text {
+	font-weight: bold;
+}
+
+.exporter__option-fieldset-description {
+	font-size: smaller;
+	color: $gray;
+	padding-left: 24px;
+	padding-right: 24px;
+}
+
+.exporter__option-fieldset-fields {
+	padding-left: 24px;
+	padding-right: 24px;
+
+	select {
+		width: 100%;
+	}
+}

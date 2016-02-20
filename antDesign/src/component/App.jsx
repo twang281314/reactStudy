@@ -18,7 +18,7 @@ const App=React.createClass({
        return <div><div>
        <DatePicker onchange={this.handleChange} />
        </div>
-       <div style={{marginTop: 20}}>当前日期:{this.state.date.toString()}</div>
+       <div style={{marginTop: 20}}>当前日期:anytao</div>
        </div>
     }
 });

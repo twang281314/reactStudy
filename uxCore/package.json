@@ -1,0 +1,39 @@
+{
+  "name": "uxcore",
+  "version": "1.0.0",
+  "description": "how to use uxCore",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "anytao",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.5.2",
+    "babel-loader": "^6.2.3",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "classnames": "^2.2.3",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^2.3.1",
+    "gulp-webpack": "^1.5.0",
+    "jsx-loader": "^0.13.2",
+    "object-assign": "^4.0.1",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "uxcore-button": "^0.3.4",
+    "uxcore-dialog": "^0.2.7",
+    "uxcore-form": "^1.2.12",
+    "uxcore-table": "^1.3.7",
+    "webpack": "^1.12.13"
+  },
+  "devDependencies": {
+    "babel-loader": "^6.2.3",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
+    "node-sass": "^3.4.2",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7"
+  }
+}

@@ -1,0 +1,62 @@
+// ==========================================================================
+// PluginActions
+// ==========================================================================
+
+.plugin-action {
+	clear:both;
+	line-height: 1;
+	margin-top: 16px;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&.is-warning {
+		.plugin-action__label {
+			color: $alert-red;
+		}
+	}
+}
+
+.plugin-action .toggle__switch {
+	float: right;
+}
+
+.plugin-action__label {
+	color: $gray;
+	font-size: 11px;
+	line-height: 16px;
+	margin-right: 8px;
+	vertical-align: top;
+	text-transform: uppercase;
+	cursor: pointer;
+
+	.is-disabled & {
+		color: lighten( $gray, 30% );
+		cursor: default;
+	}
+
+	.has-disabled-info & {
+		cursor: pointer;
+	}
+}
+
+.plugin-action .form-toggle__label .form-toggle__switch {
+	float: right;
+}
+
+.plugin-action__children {
+	float: right;
+}
+
+.plugin-action__children .noticon {
+	margin-left: 8px;
+}
+.plugin-action__disabled-info.info-popover {
+	float: right;
+	margin: 0 3px;
+}
+
+.plugin-action__disabled-info-list {
+	margin-left: 16px;
+}

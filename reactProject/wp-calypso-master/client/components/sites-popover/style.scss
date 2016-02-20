@@ -1,0 +1,75 @@
+$sites-popover-width: 300px;
+
+.sites-popover {
+	width: $sites-popover-width;
+
+	// For some reason this popover doesn't inherit the body's
+	// font-size, so I define it here. -shaun
+	font-size: 15px;
+}
+
+.sites-popover .tip-inner {
+	position: relative;
+	text-align: left;
+	overflow: hidden;
+}
+
+.sites-popover .site-selector {
+	&.is-large {
+		padding-top: 50px;
+	}
+}
+
+.sites-popover .search {
+	position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+}
+
+.sites-popover .site-selector__sites {
+	overflow-y: auto;
+	max-height: 70vh;
+}
+
+.sites-popover .site__content {
+	text-decoration: none;
+}
+
+.sites-popover .site-selector .site {
+	&.is-selected {
+		background-color: $gray;
+
+		.site__title {
+			color: $white;
+
+			&::before {
+				color: $white;
+			}
+		}
+
+		.site__domain {
+			color: $white;
+		}
+	}
+
+	.notouch & {
+		&:hover {
+			background: $blue-medium;
+
+			.site__title,
+			.site__domain {
+				color: white;
+			}
+
+			.site__title:before {
+				color: white;
+			}
+		}
+	}
+}
+
+.sites-popover .site-selector .site:not(.is-selected) .site-icon__img {
+	opacity: 1;
+	filter: none;
+}
