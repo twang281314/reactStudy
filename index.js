@@ -9,18 +9,15 @@ var port=3333;
 var http = require("http");
 var url = require("url");
 var fs = require("fs");
-<<<<<<< HEAD
 var path = require("path");
 var mime = require("./mime").types;
 var config = require("./config");
 var zlib = require("zlib");
-=======
 var path = require("path")
 var mime = require("./mime").types;
 var config = require("./config");
 var zlib = require("zlib");
 
->>>>>>> 87119fa366eff9fb5e65accabf522c6fed5fbe70
 //创建http服务端
 var server=http.createServer(function(request,response){
     var obj= url.parse(request.url);
