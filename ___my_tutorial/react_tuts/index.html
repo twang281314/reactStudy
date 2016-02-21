@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>学习React</title>
+        
+        <script src="./bower_components/react/react.js"> </script>
+        <script src="./bower_components/react/react-dom.js"> </script>
+        <script src="./bower_components/babel/browser.min.js"></script>
+        
+    </head>
+    <body>
+        <div id="app"></div>
+        <script type="text/babel"> 
+        
+           var MessageBox=React.createClass({
+              alertMe:function(){
+                alert("没事点我干嘛啊");
+              },
+              render: function(){
+               return (<div>
+               <h2  onClick={this.alertMe}>Welcome to the World Of React</h2>
+               <SubMessage/>
+               </div>)
+              }
+           });
+           
+           var SubMessage=React.createClass({
+                render:function(){
+                  return (
+                  <div>
+                    <h3>写代码是不是很有意思啊</h3>
+                    <Footer/>
+                  </div>
+                  )
+                }
+           });
+           
+           var  Footer=React.createClass({
+                
+                render:function(){
+                 return (
+                  <small>因为我们在用代码改变世界</small>
+                 )
+                }
+           });
+        
+        
+           ReactDOM.render(
+             <div>
+              <MessageBox  />
+              <h1>Hello World</h1>
+              <input type="submit" />
+              <br/>
+              <input type="text" />
+             </div>,
+            
+             document.getElementById("app")
+           );
+            
+        </script>
+        
+        
+    </body>
+    
+</html>
